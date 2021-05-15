@@ -13,6 +13,8 @@ jobs:
     name: Pylint
     runs-on: ubuntu-latest
     steps:
+      - name: setup pyenv
+        uses: gabrielfalcao/pyenv-action@v5
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies and lint
