@@ -13,10 +13,8 @@ jobs:
     name: Pylint
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
+      - name: Install dependencies and lint
         run: |
           pip install pipenv
           pipenv install --dev
-      - name: Pylint
-        run: |
           pylint src
