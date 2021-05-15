@@ -25,4 +25,4 @@ jobs:
         run: |
           pip install pipenv
           pipenv install --dev
-          pylint src
+          pipenv run pylint src
