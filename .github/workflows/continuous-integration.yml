@@ -15,6 +15,10 @@ jobs:
     steps:
       - name: setup pyenv
         uses: gabrielfalcao/pyenv-action@v5
+        env:
+          # allow unsecure commands add-path and set-env until v7 is available
+          # see: https://github.com/gabrielfalcao/pyenv-action/issues/99
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies and lint
